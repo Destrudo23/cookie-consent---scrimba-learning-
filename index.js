@@ -1,11 +1,11 @@
 // Import stylesheets
 import './style.css';
 
-
+const modal = document.getElementById("modal")
 
 
 setTimeout(function(){
-  console.log("modal opened")
+  modal.style.display = "inline"
 }, 1500)
 
 
