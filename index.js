@@ -7,10 +7,7 @@ const consentForm = document.getElementById("consent-form");
 const modalText = document.getElementById("modal-text");
 const modalHead = document.getElementById("modal-head");
 const declineBtn = document.getElementById("decline-btn")
-const modalChoiceBtns = document.getElementById("modal-choice-btns")
-
-
-
+const modalChoiceBtns = document.getElementById("modal-choice-btns");
 
 setTimeout(function(){
   modal.style.display = "inline"
@@ -23,7 +20,6 @@ modalCloseBtn.addEventListener("click", function() {
 
 consentForm.addEventListener("submit", function(event) {
   event.preventDefault()
-  console.log ("form submitted")
   modalHead.style.textAlign = "center"
   const consentFormData = new FormData(consentForm)
   const fullName = consentFormData.get("fullName")
@@ -35,11 +31,11 @@ consentForm.addEventListener("submit", function(event) {
     </p>
   </div>`
 
-  setTimeout(function(){
+  setTimeout(function() {
     document.getElementById("uploadText").innerText = "Making the sale..."
   }, 1500)
 
-  setTimeout(function(){
+  setTimeout(function() {
     document.getElementById("modal-close-btn").disabled = false
     document.getElementById("modal-inner").innerHTML = 
     `<h2>Thanks <span class="modal-display-name">${fullName}</span> you sucker! </h2>
